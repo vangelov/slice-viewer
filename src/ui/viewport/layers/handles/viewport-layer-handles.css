@@ -1,0 +1,13 @@
+.ViewportLayerHandle {
+  position: absolute;
+}
+
+.ViewportLayerHandles-Handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 1px 1px 0px black;
+}

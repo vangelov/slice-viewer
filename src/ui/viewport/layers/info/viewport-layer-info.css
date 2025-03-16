@@ -1,0 +1,10 @@
+.ViewportLayerInfo {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+  color: white;
+  text-shadow: 0.5px 0.5px 0px black;
+  white-space: pre;
+  text-align: right;
+  font-family: monospace;
+}

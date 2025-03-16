@@ -1,0 +1,14 @@
+.ViewportHeader {
+  background: #1f1f1f;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #696969;
+  font-size: 12px;
+  font-weight: bold;
+  user-select: none;
+  text-transform: uppercase;
+}

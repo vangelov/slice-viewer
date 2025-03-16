@@ -1,0 +1,37 @@
+.ViewportContent {
+  position: absolute;
+  background: #2e2e2e;
+  cursor: crosshair;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+
+.ViewportHeader {
+  background: #1f1f1f;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #696969;
+  font-size: 12px;
+  font-weight: bold;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.ViewportHeader-SizeSmall {
+  cursor: pointer;
+}
+
+.ViewportHeader-SizeSmall:hover {
+  background: #3b3b3b;
+  color: white;
+}
+
+.ViewportHeader-SizeSmall:active {
+  background: white;
+  color: black;
+}
