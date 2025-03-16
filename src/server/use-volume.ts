@@ -57,7 +57,7 @@ export function useVolume() {
     async function loadData() {
       setIsLoading(true);
       try {
-        const blob = await loadVolumeData("/volume_data.zip");
+        const blob = await loadVolumeData("/slice-viewer/volume_data.zip");
         const arrayBuffer = await unzipVolumeData(blob);
         setVolume({ ...Config.volume, data: new Uint16Array(arrayBuffer) });
       } catch (error) {
