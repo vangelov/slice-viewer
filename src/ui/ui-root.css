@@ -2,6 +2,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  gap: 10px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;

@@ -2,6 +2,7 @@ import { memo, useLayoutEffect, useMemo, useState } from "react";
 import { Renderer } from "ui/gl/renderer";
 import { Camera } from "ui/gl/camera";
 import { Axis, Volume } from "types";
+import "./viewport-layer-anatomy.css";
 
 type Props = {
   volume: Volume;
@@ -43,7 +44,7 @@ export const ViewportLayerAnatomy = memo(
       <canvas
         className="ViewportLayerAnatomy"
         ref={setCanvas}
-        style={{ width, height, position: "absolute" }}
+        style={{ width, height }}
         width={deviceWidth}
         height={deviceHeight}
       />

@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 import { Volume } from "types";
 import { BlobReader, ZipReader } from "@zip.js/zip.js";
 
-function loadVolumeData(url: string): Promise<Blob> {
+function loadVolumeData(
+  url: string,
+  onProgress: (progress: number) => void
+): Promise<Blob> {
   return new Promise((resolve, reject) => {
     const request = new XMLHttpRequest();
 
     request.open("GET", url, true);
     request.responseType = "blob";
+    request.onprogress = (event) => onProgress(event.loaded / event.total);
 
     request.onerror = () => {
       reject(new Error("Could not load data"));
@@ -52,13 +56,20 @@ export function useVolume() {
   const [volume, setVolume] = useState<Volume>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error>();
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     async function loadData() {
       setIsLoading(true);
+      setProgress(0);
+
       try {
-        const blob = await loadVolumeData("/slice-viewer/volume_data.zip");
+        const blob = await loadVolumeData(
+          "/slice-viewer/volume_data.zip",
+          setProgress
+        );
         const arrayBuffer = await unzipVolumeData(blob);
+
         setVolume({ ...Config.volume, data: new Uint16Array(arrayBuffer) });
       } catch (error) {
         setError(error instanceof Error ? error : new Error(error as string));
@@ -69,5 +80,5 @@ export function useVolume() {
     if (!volume) loadData();
   }, [volume]);
 
-  return { volume, error, isLoading };
+  return { volume, error, isLoading, progress };
 }
