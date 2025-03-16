@@ -254,6 +254,8 @@ export const Viewport = memo(({ volume, axis, rect }: Props) => {
           axis={axis}
           width={contentRect.width}
           height={contentRect.height}
+          deviceWidth={deviceWidth}
+          deviceHeight={deviceHeight}
           normalizedSlice={normalizedSlice}
           camera={camera}
         />

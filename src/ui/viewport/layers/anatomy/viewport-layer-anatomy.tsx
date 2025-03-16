@@ -8,15 +8,24 @@ type Props = {
   axis: Axis;
   width: number;
   height: number;
+  deviceWidth: number;
+  deviceHeight: number;
   normalizedSlice: number;
   camera: Camera;
 };
 
 export const ViewportLayerAnatomy = memo(
-  ({ volume, axis, width, height, normalizedSlice, camera }: Props) => {
+  ({
+    volume,
+    axis,
+    width,
+    height,
+    deviceWidth,
+    deviceHeight,
+    normalizedSlice,
+    camera,
+  }: Props) => {
     const [canvas, setCanvas] = useState<HTMLCanvasElement | null>(null);
-    const deviceWidth = width * window.devicePixelRatio;
-    const deviceHeight = height * window.devicePixelRatio;
 
     const renderer = useMemo(
       () => (canvas ? new Renderer(volume, axis, canvas) : null),
