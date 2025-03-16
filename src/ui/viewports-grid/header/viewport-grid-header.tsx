@@ -13,7 +13,11 @@ export function ViewportGridHeader({ rect }: Props) {
         (Windows, Linux) or <b>Cmd</b> (MacOS) key to to zoom and pan.
       </span>
 
-      <a target="_blank" style={{ color: "white" }} href="http://abv.bg">
+      <a
+        target="_blank"
+        style={{ color: "white" }}
+        href="https://github.com/vangelov/slice-viewer"
+      >
         View Github
       </a>
     </div>
