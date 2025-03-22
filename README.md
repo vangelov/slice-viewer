@@ -19,7 +19,10 @@ I wanted to learn more how these types of UIs worked and the best way to do it i
 I'm using the sample CT scan from [here](https://github.com/SlicerRt/SlicerRtData/tree/master/aria-phantom-contours-branching). It's convereted to a custom format that's easier to deal with than DICOM. In the future it will definitely be useful if a third party library can be used to import any DICOM.
 
 ## Dependecies 
-Apart from React, the app depends on [PicoGL](https://tsherif.github.io/picogl.js/) as a very thin layer on top of WebGL and [zip.js](https://gildas-lormeau.github.io/zip.js/) for unzippig the volume data. I decided to just compress the volume data as it was the fastest solution to get below the 100mb limit for files in Github in this case, but this won't work for larger volumes. 
+Apart from React, the app depends on:
+- [PicoGL](https://tsherif.github.io/picogl.js/): A very thin layer on top of WebGL that provides more convenient API.
+- [gl-matrix](https://glmatrix.net/): For vector and matrix transformations.
+- [zip.js](https://gildas-lormeau.github.io/zip.js/): For unzippig the volume data. I decided to just compress the volume data as it was the fastest solution to get below the 100mb limit for files in Github in this case, but this won't work for larger volumes. 
 
 ## Implementation
 Each viewport is consists of several layers from bottom to top:
