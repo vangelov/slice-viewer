@@ -8,6 +8,8 @@ const normalsMap = new Map([
   [Axis.Z, vec3.fromValues(0, 0, 1)],
 ]);
 
+const all = [Axis.X, Axis.Y, Axis.Z];
+
 function getNormal(axis: Axis) {
   const normal = normalsMap.get(axis);
   if (!normal) throw new Error("No normal for axis: " + axis);
@@ -41,8 +43,6 @@ function setValue(axis: Axis, pointOrVector: point3 | vec3, value: number) {
       return Lib.assertUnreachable(axis);
   }
 }
-
-const all = [Axis.Y, Axis.X, Axis.Z];
 
 export const Axes = {
   getNormal,
