@@ -31,7 +31,7 @@ Each viewport is consists of several layers from bottom to top:
 
 All viewports and their layers are memoized so they only re-rendered when necessary.
 
-The ap state is just a `useState` that's injected with a context. Reading from and writing to the state is done with custom hooks.
+The app's state is just a `useState` that's injected with a context. Reading from and writing to the state is done with custom hooks.
 
 ### 
 
