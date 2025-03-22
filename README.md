@@ -24,7 +24,7 @@ Apart from React, the app depends on [PicoGL](https://tsherif.github.io/picogl.j
 ## Implementation
 Each viewport is consists of several layers from bottom to top:
 
-- **Anatomy**: Uses a separate WebGL context to render a single slice of the volume depending on the plane (axial, saggital, coronal).
+- **Anatomy**: Uses a separate WebGL context to render a single slice of the volume depending on the plane (axial, sagittal, coronal).
 - **Lines**: Shows where the other 2 planes are.
 - **Handles** (when the cursor is over the viewport): Allows to move a single plane from another viewport.
 - **Info**: Shows information for the current cursor position.
