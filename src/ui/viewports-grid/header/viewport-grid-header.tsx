@@ -10,7 +10,7 @@ export function ViewportGridHeader({ rect }: Props) {
     <div className="ViewportGridHeader" style={rect}>
       <span>
         <b>ⓘ</b> <b>Scroll</b> to move between slices. Hold <b>Ctrl</b>{" "}
-        (Windows, Linux) or <b>Cmd</b> (MacOS) key to to zoom and pan.
+        (Windows, Linux) or <b>Cmd</b> (MacOS) key to zoom and pan.
       </span>
 
       <a
